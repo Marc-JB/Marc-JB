@@ -135,14 +135,14 @@ class MyClass {
 Braces around the statements are required unless the condition and the body fit on one line.
 
 If the condition and the body fit on one line and that line is shorter than the max line length, then braces are not required, e.g.
-```java
-if (condition) body();
+```Kotlin
+if (condition) body()
 ```
 
 This is __not recommeded__:
-```java
+```Kotlin
 if (condition)
-    body();
+    body()
 ```
 
 ## 3.6 Annotation style
@@ -215,10 +215,10 @@ The opposite case are __callback__ interfaces that should always be the __last__
 Examples:
 ```Kotlin
 // Context always goes first
-suspend fun loadUser(Context context, int userId): User
+suspend fun loadUser(context: Context, userId: Int): User
 
 // Callbacks always go last
-fun loadUserCallback(Context context, int userId, UserCallback callback)
+fun loadUserCallback(context: Context, userId: Int, callback: (User) -> Unit)
 ```
 
 ## 3.11 String constants, naming, and values
